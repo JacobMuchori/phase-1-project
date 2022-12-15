@@ -1,5 +1,12 @@
 body {
     text-align: center;
+    background-size: cover;
+}
+
+h1.topnav {
+    text-align: right;
+    color: white;
+    text-size-adjust: 10px;
 }
 
 /* Add a black background color to the top navigation */
