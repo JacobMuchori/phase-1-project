@@ -12,23 +12,28 @@ const dataWind=document.getElementById("wind")
 const datadescription=document.getElementById("description")
 const recommendationbtn= document.getElementById("recommend-btn")
 const textrecomm= document.getElementById("recomm")
+const fdbcktag = document.getElementById("feddbacktag")
+const abouttag = document.getElementById("abttag")
+const fdbckEl= document.getElementById("Feedbackinfo")
+const abtEl= document.getElementById("Aboutinfo")
 
+function hideEl() {
+    loginDetails.style.display= "none";
+    signupDetails.style.display= "none";
+    signupDiv.style.display= "none";
+}
 
 loginForm.addEventListener("submit", function onsubmit(e) {
     e.preventDefault()
 
-    loginDetails.style.display= "none";
-    signupDetails.style.display= "none";
-    signupDiv.style.display= "none";
+    hideEl();
     mainDetails.style.display= "block";
 })
 
 signUpForm.addEventListener("click", function onsubmit(e) {
     e.preventDefault()
 
-    loginDetails.style.display= "none";
-    signupDetails.style.display= "none";
-    signupDiv.style.display= "none";
+    hideEl();
     mainDetails.style.display= "block";
 })
 
@@ -44,9 +49,7 @@ signUpButton.addEventListener("click", function onclick(e) {
 locationForm.addEventListener("submit", function onsubmit(event) {
     event.preventDefault()
 
-    loginDetails.style.display= "none";
-    signupDetails.style.display= "none";
-    signupDiv.style.display= "none";
+    hideEl();
     const input= document.getElementById("search")
     
 
@@ -87,6 +90,19 @@ function liked(){
     element.classList.toggle("liked");
   }
 
+fdbcktag.addEventListener("click", () => {
+    fdbckEl.style.display= "block";
+    mainDetails.style.display= "none";
+    abtEl.style.display= "none";
+    hideEl();
+})
+
+abouttag.addEventListener("click", () => {
+    abtEl.style.display= "block"
+    mainDetails.style.display= "none";
+    fdbckEl.style.display= "none";
+    hideEl();
+})
 
 
 document.addEventListener("DOMContentLoaded", () => {

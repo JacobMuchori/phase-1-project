@@ -85,3 +85,11 @@ button.liked i{
       -webkit-filter: blur(0.5px);
     }
 }
+
+#Aboutinfo {
+    display: none;
+}
+
+#Feedbackinfo {
+    display: none;
+}
