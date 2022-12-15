@@ -1,0 +1,87 @@
+body {
+    text-align: center;
+}
+
+/* Add a black background color to the top navigation */
+.topnav {
+    background-color: rgb(15, 11, 11);
+    overflow: hidden;
+}
+  
+/* Style the links inside the navigation bar */
+.topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+  
+/* Change the color of links on hover */
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+    background-color: #04AA6D;
+    color: white;
+}
+
+#login-details {
+    display: block;
+}
+
+#sign-up-details {
+    position: static;
+    display: none;
+    text-align: center;
+}
+
+#weather-html {
+    display: none;
+    text-align: center;
+}
+
+#main-div.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    margin: auto;
+    text-align: center;
+}
+
+.recommendation-details {
+    text-align: center;
+}
+
+button.like {
+    background: #fff;
+    border: unset;
+    outline: 0;
+    font-size: 18px;
+    cursor: pointer;
+    color: #65676b;
+    padding: 5px 10px;
+}
+  
+button.liked {
+    color: #0571ed;
+}
+button.liked i{
+    animation: anim 0.5s ease-in-out;
+    -webkit-animation: anim 0.5s ease-in-out;
+}
+
+@keyframes anim {
+    100% {
+      transform: rotate(-15deg) scale(1.3);
+      -webkit-transform: rotate(-15deg) scale(1.3);
+      -moz-transform: rotate(-15deg) scale(1.3);
+      -ms-transform: rotate(-15deg) scale(1.3);
+      -o-transform: rotate(-15deg) scale(1.3);
+      filter: blur(0.5px);
+      -webkit-filter: blur(0.5px);
+    }
+}
