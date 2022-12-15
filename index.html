@@ -11,8 +11,8 @@
     <div class="topnav">
         <a class="active" href="#home">Home</a>
         <a href="#news">News</a>
-        <a href="#contact">Contact</a>
-        <a href="#about">About</a>
+        <a href="#Feedback">Feedback</a>
+        <a href="#About">About</a>
     </div>
     <div id="">
         <h1>Interactive weather Forecaster</h1>
@@ -64,12 +64,21 @@
                 <label for="recommendtext">Your Recommendation:</label>
                 <p id="recomm">Recommendation: </p>
             </div>
-            <div class="button">
+            <div id="Aboutinfo">
+                <h1>What this App is about.</h1>
+                <p>This app enables its users to get real-time information about the weather. 
+                It gives the users information about the weather according to the location they
+                input and gives them recommendations on what to wear and carry for the day.
+                </p>
+            </div>
+            <div class="Feedback">
                 <button id="like" onclick="liked()">
                     <i class="fa fa-thumbs-up"></i>
                     <span class="icon">Like</span>
-                  </button>
-
+                </button>
+                <label for="feedbackreview">Give your feedback</label>
+                <textarea id="w3review" name="w3review" rows="4" cols="50"></textarea>
+                <button id="submitbtn">Submit your feedback</button>
             </div>
         </div>
     </div>
