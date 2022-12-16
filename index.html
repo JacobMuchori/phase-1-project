@@ -9,30 +9,33 @@
 </head>
 <body style="background-image: url('weather.jpg');">
     <div class="topnav">
-        <a class="active" href="#home">Home</a>
+        <a id="home-tag" class="active" href="#home">Home</a>
         <a id="feddbacktag" href="#Feedback">Feedback</a>
         <a id="abttag" href="#About">About</a>
     </div>
-    <div id="">
         <h1>Interactive weather Forecaster</h1>
-        <p>Please input your login details below.</p>
-    </div>
+        <div id="logtitle">
+            <p>Please input your login details below.</p>
+        </div>
     <div id="login-details">
         <form id="login-form">
             <label for="fUsername">Username:</label><br>
             <input type="text" id="login-name" placeholder="Please input your username"><br>
+            <label for="fUseremail">Email:</label><br>
+            <input type="text" id="login-name" placeholder="Please input your Email"><br>
             <label for="password">Password:</label><br>
             <input id="login-password" placeholder="Please input your password"><br>
-            <input type="submit">
+            <input id="logformsubmit"type="submit" placeholder="log in">
         </form>
     </div>
     <div id="btn-signup">
         <div id="btn-sign-up">
-            <p>If you do not have login credentials, please sign up.</p>
+            <p id="signdtls">If you do not have login credentials, please sign up.</p>
             <button id="sign-up btn">Sign up</button>
         </div>
     </div>
     <div id="sign-up-details">
+        <p>Fill in the details below to sign up.</p>
         <form id="sign-up form">
             <label for="f2name">Name:</label><br>
             <input type="Name" placeholder="Please input your name"><br>
@@ -40,10 +43,10 @@
             <input type="username" placeholder="Please create your username"><br>
             <label for="f2signup-password">Password:</label><br>
             <input type="newPassword" placeholder="Please create your custom password"><br>
-            <input type="submit">
+            <input type="submit" >
         </form>
     </div>
-    <div id="weather-html">
+    <div id="weather-html" class="card">
         <div id="location-input">
             <form id="location-form">
                 <input id="search" type="text" name="search" placeholder="Please input your location">
@@ -51,7 +54,7 @@
             </form>
         </div>
         <div id="main-div">
-            <div id="weather-container" class="card">
+            <div id="weather-container">
                 <!--contains our fetched weather data-->
                 <h2 id="temp">Temperature: </h2>
                 <h2 id="wind">Wind: </h2>
@@ -60,26 +63,26 @@
             <div id="recommend">
                 <button id="recommend-btn">Recommendation</button>
             </div id="text recommendation">
-                <label for="recommendtext">Your Recommendation:</label>
-                <p id="recomm">Recommendation: </p>
+                <p id="recomm"></p>
             </div>
         </div>
     </div>
             <div id="Aboutinfo">
-                <h1>What this App is about.</h1>
+                <h2>What this App is about.</h2>
                 <p>This app enables its users to get real-time information about the weather. 
                 It gives the users information about the weather according to the location they
-                input and gives them recommendations on what to wear and carry for the day.
+                input and gives them recommendations on what to wear based on the information 
+                displayed.
                 </p>
             </div>
             <div id="Feedbackinfo">
                 <button id="like" onclick="liked()">
                     <i class="fa fa-thumbs-up"></i>
                     <span class="icon">Like</span>
-                </button>
-                <label for="feedbacksubmission">Give your feedback</label>
-                <textarea id="feedback-review" name="feedback" rows="4" cols="50"></textarea>
-                <button id="submitbtn">Submit your feedback</button>
+                </button><br>
+                <label for="feedbacksubmission">Give your feedback</label><br>
+                <textarea id="feedback-review" name="feedback" rows="4" cols="50"></textarea><br>
+                <button id="feedbackbtn">Submit your feedback</button><br>
             </div>
     <script src="JS/index.js"></script>
 </body>

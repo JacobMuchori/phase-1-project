@@ -1,18 +1,17 @@
 body {
     text-align: center;
     background-size: cover;
+    font-size: 30px;
 }
 
-h1.topnav {
-    text-align: right;
-    color: white;
-    text-size-adjust: 10px;
-}
 
 /* Add a black background color to the top navigation */
 .topnav {
     background-color: rgb(15, 11, 11);
     overflow: hidden;
+    margin-top: 0px;
+    margin-left: 0px;
+    
 }
   
 /* Style the links inside the navigation bar */
@@ -33,14 +32,23 @@ h1.topnav {
 
 /* Add a color to the active/current link */
 .topnav a.active {
-    background-color: #04AA6D;
+    background-color: rgba(255, 217, 0, 0.603);
     color: white;
 }
 
 #login-details {
     display: block;
+    font-size: 30px;
 }
+#logformsubmit {
+    font-size: 20px;
+    background-color: green;
+}
+#signdtls {
+    color: red;
+    font-size: 35px;
 
+}
 #sign-up-details {
     position: static;
     display: none;
@@ -50,6 +58,7 @@ h1.topnav {
 #weather-html {
     display: none;
     text-align: center;
+    font-size: 15px;
 }
 
 #main-div.card {
@@ -95,8 +104,41 @@ button.liked i{
 
 #Aboutinfo {
     display: none;
+    text-align: center;
+    font-size: 40px;
 }
 
 #Feedbackinfo {
+    display: none;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    margin: auto;
+    text-align: center;
+    background: #65676b;
+    padding: 3em;
+    border-radius: 30px;
+    width: 100%;
+
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+
+button {
+    font-size: 20px;
+    border-radius: 10px;
+}
+
+#recomm {
+    color: rgb(38, 0, 255);
+    font-size: 30px;
+}
+#alert {
     display: none;
 }

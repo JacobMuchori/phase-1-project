@@ -16,11 +16,17 @@ const fdbcktag = document.getElementById("feddbacktag")
 const abouttag = document.getElementById("abttag")
 const fdbckEl= document.getElementById("Feedbackinfo")
 const abtEl= document.getElementById("Aboutinfo")
+const hometag= document.getElementById("home-tag")
+const inputtag= document.getElementById("logtitle")
+const feedbtn= document.getElementById("feedbackbtn")
+const returnMessage=document.getElementById("alert")
+const textmess= document.getElementById("feedback-review")
 
 function hideEl() {
     loginDetails.style.display= "none";
     signupDetails.style.display= "none";
     signupDiv.style.display= "none";
+    inputtag.style.display= "none";
 }
 
 loginForm.addEventListener("submit", function onsubmit(e) {
@@ -30,7 +36,7 @@ loginForm.addEventListener("submit", function onsubmit(e) {
     mainDetails.style.display= "block";
 })
 
-signUpForm.addEventListener("click", function onsubmit(e) {
+signUpForm.addEventListener("submit", function onsubmit(e) {
     e.preventDefault()
 
     hideEl();
@@ -102,6 +108,23 @@ abouttag.addEventListener("click", () => {
     mainDetails.style.display= "none";
     fdbckEl.style.display= "none";
     hideEl();
+})
+
+hometag.addEventListener("click", ()=> {
+    fdbckEl.style.display= "none";
+    mainDetails.style.display= "none";
+    abtEl.style.display= "none";
+    loginDetails.style.display= "block";
+    signupDetails.style.display= "none";
+    signupDiv.style.display= "block";
+
+})
+feedbtn.addEventListener("click", (e)=> {
+    e.preventDefault()
+
+    textmess.value = ""
+    fdbckEl.style.display= "block"
+    alert("Your feedback has been received and is highly appreciated.")
 })
 
 
