@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WEATHER APP</title>
     <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
 <body style="background-image: url('weather.jpg');">
     <div class="topnav">
@@ -56,8 +57,8 @@
         <div id="main-div">
             <div id="weather-container">
                 <!--contains our fetched weather data-->
-                <h2 id="temp">Temperature: </h2>
-                <h2 id="wind">Wind: </h2>
+                <h3 id="temp">Temperature: </h3>
+                <h3 id="wind">Wind: </h3>
                 <h3 id="description">Weather Description: </h3>
             </div>
             <div id="recommend">
@@ -77,13 +78,19 @@
             </div>
             <div id="Feedbackinfo">
                 <button id="like" onclick="liked()">
-                    <i class="fa fa-thumbs-up"></i>
+                    <i class="material-icons">favorite</i>
                     <span class="icon">Like</span>
                 </button><br>
                 <label for="feedbacksubmission">Give your feedback</label><br>
-                <textarea id="feedback-review" name="feedback" rows="4" cols="50"></textarea><br>
+                <textarea id="feedback-review" name="feedback" rows="20" cols="50"></textarea><br>
                 <button id="feedbackbtn">Submit your feedback</button><br>
             </div>
     <script src="JS/index.js"></script>
 </body>
 </html>
+
+<a target="_blank" href="https://icons8.com/icon/15359/partly-cloudy-day">Partly Cloudy Day</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+<a target="_blank" href="https://icons8.com/icon/15341/clouds">Clouds</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+<a target="_blank" href="https://icons8.com/icon/15352/sun">Sun</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+<a target="_blank" href="https://icons8.com/icon/18597/heavy-rain">Heavy Rain</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+<a target="_blank" href="https://icons8.com/icon/18609/light-rain">Light Rain</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>

@@ -81,10 +81,10 @@ locationForm.addEventListener("submit", function onsubmit(event) {
         function recommendationCreater(data) {
             let descr= data.description
         if(descr === "Cloudy" || descr === "Partly cloudy") {
-            return textrecomm.textContent=`Description: Wear heavy clothing and remember to carry an umbrella`
+            return textrecomm.textContent=`Wear heavy clothing and remember to carry an umbrella`
         } 
         else if (descr !== "Cloudy" || descr !== "Partly cloudy") {
-            return textrecomm.textContent=`Description: Wear light clothing and remember to hydrate`
+            return textrecomm.textContent=`Wear light clothing and remember to hydrate`
         }
         }
     })
