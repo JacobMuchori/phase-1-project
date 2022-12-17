@@ -2,13 +2,13 @@
 
 # Description
 This project is about a weather application that allowers the user to get real time data of the 
-weather in a specific location.It also gives the user a recommendation on what to wear or carry based on the current weather.
+weather in a specific location specfically cities.It also gives the user a recommendation on what to wear or carry based on the current weather.
 
 To run the application:
 ### Alternative one.
 Click on the Github pages link provided and you will be directed to the mini-web application directly.
 
-        https://jacobmuchori.github.io/flatdango-wk3-code-challenge/
+        https://jacobmuchori.github.io/phase-1-project/
 
 ### Alternative two.
 ### Installation
@@ -39,7 +39,10 @@ This enables us to run our html file in the browser.
 
 
 # Project set up
-Once the index.html file is running in the browser, you should be directed to a window which is displaying the mini-web application.In the mini-web application,there is a title showing the movie theater and a subtitle explaining the mini-web apps main function.We also have a left side bar that contains the title of the films that are available and a card displaying the details of our first film by default. Upon clicking of a specific film title, you should see a card display showing the details of the film title selected. The card shows the title of the film, its poster image, movie description, the movies runtime and showtime, and the available tickets for purchasing. There is also a buy ticket button at the bottom of the card, which when you double-click, you should see the available tickets number decrease, meaning that the user has purchased a ticket.When the available tickets reach zero, the button changes to sold out and you cannot buy any more tickets.
+Once the index.html file is running in the browser, you should be directed to a window which is displaying the weather application. In the weather application is a navigation menu containing 
+three links.The first is the home link,that directs the user to the login page, the second is the
+feedback link, that directs the user to a feedback page and the third is an about link that directs the user to a page showing what the application is about. In the login page, you can fill the login form and submit it so that you can be directed to the main page. If you are a new user, you can press the sign up button which will direct you to a sign up form that you can fill and submit then be directed to the main page.In the main page is a login form asking the user to input any location or city.When the user has filled the form and submitted it, the page will display the temperature,
+wind speed and weather description of the specified input.To receive a recommendation on what to wear or carry, the user will press the recommendation button that will display a recommendation with regards to the weather details given. If the user is satisfied with the application, the can press the feedback link on the navigation menu which will direct them to a feedback page that has a like button.When the like button is pressed, the colour of the heart should change from black to blue.There is also a text area where the user can write a comment on the weather application.When the user submits the comment, they will receive an alert saying that their feedback has been received and is highly appreciated.
 
 # Details of Author
  This challenge was contributed by:

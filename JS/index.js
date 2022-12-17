@@ -21,6 +21,7 @@ const inputtag= document.getElementById("logtitle")
 const feedbtn= document.getElementById("feedbackbtn")
 const returnMessage=document.getElementById("alert")
 const textmess= document.getElementById("feedback-review")
+const iconcreater= document.getElementById("mtrls")
 
 function hideEl() {
     loginDetails.style.display= "none";
@@ -34,6 +35,7 @@ loginForm.addEventListener("submit", function onsubmit(e) {
 
     hideEl();
     mainDetails.style.display= "block";
+    loginForm.reset()
 })
 
 signUpForm.addEventListener("submit", function onsubmit(e) {
@@ -41,6 +43,7 @@ signUpForm.addEventListener("submit", function onsubmit(e) {
 
     hideEl();
     mainDetails.style.display= "block";
+    signUpForm.reset()
 })
 
 
@@ -66,8 +69,17 @@ locationForm.addEventListener("submit", function onsubmit(event) {
 
     function renderweatherDetails(data) {
         dataTemp.innerText= `Temperature: ${data.temperature}`
-        dataWind,innerText=`Wind: ${data.wind}`
+        dataWind.innerText=`Wind: ${data.wind}`
         datadescription.innerText=`Description: ${data.description}`
+        if(data.description==='cloudy') {
+            iconcreater.innerText= "Cloudy"
+        } else if (data.description==="Partly cloudy"){
+            iconcreater.innerText="Partly Cloudy Day"
+        } else if (data.description==="Sunny") {
+            iconcreater.innerText="Sunny"
+        }else if(data.description==="clear") {
+            iconcreater.innerText="clear"
+        }
     }
 
     recommendationbtn.addEventListener("click", function onclick(e) {
