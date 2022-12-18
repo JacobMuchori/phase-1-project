@@ -1,3 +1,4 @@
+/*Styling our body*/
 body {
     text-align: center;
     background-size: cover;
@@ -5,7 +6,7 @@ body {
 }
 
 
-/* Add a black background color to the top navigation */
+/* Adding styles to the top navigation menu */
 .topnav {
     background-color: rgb(15, 11, 11);
     overflow: hidden;
@@ -14,7 +15,7 @@ body {
     
 }
   
-/* Style the links inside the navigation bar */
+/* Style the links inside the navigation menu */
 .topnav a {
     float: left;
     color: #f2f2f2;
@@ -36,42 +37,43 @@ body {
     color: white;
 }
 
+/*Styling the login page*/
 #login-details {
     display: block;
     font-size: 30px;
 }
+/*Styling the submission button in our login form*/
 #logformsubmit {
     font-size: 20px;
     background-color: green;
 }
+
+/*Styling the text prompting us to sign up*/
 #signdtls {
     color: red;
     font-size: 35px;
-
 }
+
+/*Styling our sign-up page*/
 #sign-up-details {
     position: static;
     display: none;
     text-align: center;
 }
 
+/*Styling our main page*/
 #weather-html {
     display: none;
     text-align: center;
     font-size: 15px;
 }
 
-#main-div.card {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    max-width: 300px;
-    margin: auto;
-    text-align: center;
-}
-
+/*Adding style to our recommendation text*/
 .recommendation-details {
     text-align: center;
 }
 
+/*Styling the like button*/
 button.like {
     background: #fff;
     border: unset;
@@ -82,9 +84,12 @@ button.like {
     padding: 5px 10px;
 }
   
+/*Colour change when like button is pressed*/
 button.liked {
     color: #0571ed;
 }
+
+/*Styling the icon in the like button*/
 button.liked i{
     animation: anim 0.5s ease-in-out;
     -webkit-animation: anim 0.5s ease-in-out;
@@ -102,6 +107,7 @@ button.liked i{
     }
 }
 
+/*Styling the About page*/
 #Aboutinfo {
     display: none;
     text-align: center;
@@ -109,10 +115,12 @@ button.liked i{
     margin: 50px 40px 40px
 }
 
+/*Hiding our feedback page till when the feedback link is pressed*/
 #Feedbackinfo {
     display: none;
 }
 
+/*Styling our card located in the main page*/
 .card {
     box-shadow: 0 4px 8px 0 rgb(0, 0, 0);
     opacity: 0.9;
@@ -129,38 +137,44 @@ button.liked i{
 
 }
 
-.card:hover {
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-  }
-
+/*Default style to all our buttons*/
 button {
     font-size: 20px;
     border-radius: 10px;
 }
 
+/*Adding style to our recommendation text*/
 #recomm {
     color: rgb(38, 0, 255);
     font-size: 30px;
 }
+
+/*hiding our alert till the feedback submission button is clicked*/
 #alert {
     display: none;
 }
 
+/*Styling the comment section in our feedback page*/
 #feedback-review {
     font-size: 12px;
 }
 
+/*Styling the heart icon*/
 .material-icons {
     font-size: 2px;
 }
 
+/*Styling the text of our fetched output*/
 #weather-container {
     text-align: left;
 }
 
+/*Adding the degree symbol to the temperature output of our fetched data*/
 #temp {
     content: \00B0;
 }
+
+/*Styling the weather icons*/
 img {
     margin: 0;
     padding: 0;
@@ -170,6 +184,7 @@ img {
     float: top;
 }
 
+/*Styling the reset location button*/
 #resetbtn {
     text-align: center;
 }
