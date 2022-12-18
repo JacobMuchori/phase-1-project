@@ -81,9 +81,9 @@ locationForm.addEventListener("submit", function onsubmit(event) {
     datareseter.addEventListener("click", (e)=> {
         e.preventDefault()
         locName.textContent=""
-        dataTemp.innerText=""
-        dataWind.innerText=""
-        datadescription.innerText=""
+        dataTemp.innerText="Temperature: "
+        dataWind.innerText="Wind: "
+        datadescription.innerText="Description: "
         img.style.display= "none"
         textrecomm.innerText=""
         locationForm.reset()
@@ -99,19 +99,21 @@ locationForm.addEventListener("submit", function onsubmit(event) {
 
         function recommendationCreater(data) {
             let descr= data.current.condition.text
-        if(descr === "Cloudy" || descr === "Partly cloudy") {
+        if(descr === "Cloudy" || descr === "Heavy rain" || descr === "Moderate rain") {
             return textrecomm.textContent=`Wear heavy clothing and remember to carry an umbrella`
         } 
-        else if (descr !== "Cloudy" || descr !== "Partly cloudy") {
-            return textrecomm.textContent=`Wear light clothing and remember to hydrate`
+        else if (descr === "Partly cloudy") {
+            return textrecomm.textContent=`Carry a jacket and umbrella for just in case purposes`
+        }
+        else if (descr === "Sunny" || descr === "Clear") {
+            return textrecomm.textContent=`Wear light clothing and remember to hydrate regularly.`
+        }
+        else {
+            return textrecomm.textContent=` Make sure you wear warm clothing.`
         }
         }
     })
 })
-
-
-
-
 
 function liked(){
     var element = document.getElementById("like");
