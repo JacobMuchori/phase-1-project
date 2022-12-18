@@ -65,7 +65,7 @@ locationForm.addEventListener("submit", function onsubmit(event) {
     const input= document.getElementById("search")
     
 
-    fetch(`http://api.weatherapi.com/v1/current.json?key=abfd839798f54c37bb6122417221712&q=${input.value}`)
+    fetch(`https://api.weatherapi.com/v1/current.json?key=abfd839798f54c37bb6122417221712&q=${input.value}`)
     .then((response)=> response.json())
     .then((data => renderweatherDetails(data)));
 
@@ -81,7 +81,7 @@ locationForm.addEventListener("submit", function onsubmit(event) {
     recommendationbtn.addEventListener("click", function onclick(e) {
         e.preventDefault()
 
-        fetch(`http://api.weatherapi.com/v1/current.json?key=abfd839798f54c37bb6122417221712&q=${input.value}`)
+        fetch(`https://api.weatherapi.com/v1/current.json?key=abfd839798f54c37bb6122417221712&q=${input.value}`)
         .then((response)=> response.json())
         .then((data => recommendationCreater(data)));
 
