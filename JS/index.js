@@ -85,6 +85,7 @@ locationForm.addEventListener("submit", function onsubmit(event) {
         dataWind.innerText=""
         datadescription.innerText=""
         img.style.display= "none"
+        textrecomm.innerText=""
         locationForm.reset()
     })
 
