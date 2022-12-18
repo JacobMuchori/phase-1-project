@@ -4,7 +4,7 @@ const loginForm= document.getElementById("login-form")
 const signUpForm =document.getElementById("sign-up form")
 const mainDetails= document.getElementById("weather-html")
 const locationForm= document.getElementById("location-form")
-const mainDiv= document.getAnimations("weather-container")
+const mainDiv= document.getElementById("weather-container")
 const signupDiv=document.getElementById("btn-signup")
 const signUpButton = document.getElementById("sign-up btn")
 const dataTemp= document.getElementById("temp")
@@ -21,7 +21,7 @@ const inputtag= document.getElementById("logtitle")
 const feedbtn= document.getElementById("feedbackbtn")
 const returnMessage=document.getElementById("alert")
 const textmess= document.getElementById("feedback-review")
-const iconcreater= document.getElementById("mtrls")
+const locName= document.getElementById("inputname")
 
 function hideEl() {
     loginDetails.style.display= "none";
@@ -59,39 +59,35 @@ locationForm.addEventListener("submit", function onsubmit(event) {
     event.preventDefault()
 
     hideEl();
+    const img= document.createElement("img")
+    img.className="icon"
+    mainDiv.appendChild(img)
     const input= document.getElementById("search")
     
 
-    fetch(`https://goweather.herokuapp.com/weather/${input.value}`)
+    fetch(`http://api.weatherapi.com/v1/current.json?key=abfd839798f54c37bb6122417221712&q=${input.value}`)
     .then((response)=> response.json())
     .then((data => renderweatherDetails(data)));
 
-
     function renderweatherDetails(data) {
-        dataTemp.innerText= `Temperature: ${data.temperature}`
-        dataWind.innerText=`Wind: ${data.wind}`
-        datadescription.innerText=`Description: ${data.description}`
-        if(data.description==='cloudy') {
-            iconcreater.innerText= "Cloudy"
-        } else if (data.description==="Partly cloudy"){
-            iconcreater.innerText="Partly Cloudy Day"
-        } else if (data.description==="Sunny") {
-            iconcreater.innerText="Sunny"
-        }else if(data.description==="clear") {
-            iconcreater.innerText="clear"
-        }
+        
+        locName.textContent= `${data.location.name}`
+        dataTemp.innerText= `Temperature: ${data.current.temp_c}C`
+        dataWind.innerText=`Wind: ${data.current.wind_kph}kph`
+        datadescription.innerText=`Description: ${data.current.condition.text}`
+        img.src=`${data.current.condition.icon}`
     }
 
     recommendationbtn.addEventListener("click", function onclick(e) {
         e.preventDefault()
 
-        fetch(`https://goweather.herokuapp.com/weather/${input.value}`)
+        fetch(`http://api.weatherapi.com/v1/current.json?key=abfd839798f54c37bb6122417221712&q=${input.value}`)
         .then((response)=> response.json())
         .then((data => recommendationCreater(data)));
 
 
         function recommendationCreater(data) {
-            let descr= data.description
+            let descr= data.current.condition.text
         if(descr === "Cloudy" || descr === "Partly cloudy") {
             return textrecomm.textContent=`Wear heavy clothing and remember to carry an umbrella`
         } 
@@ -101,6 +97,7 @@ locationForm.addEventListener("submit", function onsubmit(event) {
         }
     })
 })
+
 
 
 function liked(){
