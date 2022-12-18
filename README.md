@@ -48,4 +48,4 @@ feedback link, that directs the user to a feedback page and the third is an abou
 - [Jacob Muchori Kinyua](https://github.com/JacobMuchori)
 
 # License
--[ISC]
+-[MIT]
