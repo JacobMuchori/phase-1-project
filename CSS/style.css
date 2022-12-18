@@ -158,10 +158,18 @@ button {
     text-align: left;
 }
 
+#temp {
+    content: \00B0;
+}
 img {
     margin: 0;
     padding: 0;
     float: top-right;
     height: 64px;
     width: 64px;
+    float: top;
+}
+
+#resetbtn {
+    text-align: center;
 }

@@ -22,6 +22,7 @@ const feedbtn= document.getElementById("feedbackbtn")
 const returnMessage=document.getElementById("alert")
 const textmess= document.getElementById("feedback-review")
 const locName= document.getElementById("inputname")
+const datareseter= document.getElementById("reset")
 
 function hideEl() {
     loginDetails.style.display= "none";
@@ -72,11 +73,20 @@ locationForm.addEventListener("submit", function onsubmit(event) {
     function renderweatherDetails(data) {
         
         locName.textContent= `${data.location.name}`
-        dataTemp.innerText= `Temperature: ${data.current.temp_c}C`
+        dataTemp.innerText= `Temperature: ${data.current.temp_c}`+'\u00B0 C'
         dataWind.innerText=`Wind: ${data.current.wind_kph}kph`
         datadescription.innerText=`Description: ${data.current.condition.text}`
         img.src=`${data.current.condition.icon}`
     }
+    datareseter.addEventListener("click", (e)=> {
+        e.preventDefault()
+        locName.textContent=""
+        dataTemp.innerText=""
+        dataWind.innerText=""
+        datadescription.innerText=""
+        img.style.display= "none"
+        locationForm.reset()
+    })
 
     recommendationbtn.addEventListener("click", function onclick(e) {
         e.preventDefault()
@@ -97,6 +107,8 @@ locationForm.addEventListener("submit", function onsubmit(event) {
         }
     })
 })
+
+
 
 
 
